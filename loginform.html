@@ -1,0 +1,212 @@
+<html>
+<head>
+	<title>Registration Form</title>
+	<style>
+		
+    /* form{
+    	margin-top:7%;
+    }
+    ::placeholder{
+        font-size: 120%;
+    	color:black;
+    }
+	label{
+        font-size: 150%;
+		color:black;
+		margin-left:3%;
+		font-family: bold;
+        }
+    input{
+    	  background-color:white;
+		  color:black;
+		  padding: 15px 32px;
+		  text-decoration: none;
+		  display: inline-block;
+		  width:30%;
+		  border:1px solid black;
+		}
+          .button
+          {
+  		  background-color: black;
+		  border: none;
+		  color:white;
+		  padding: 15px 32px;
+		  text-align: center;
+		  text-decoration: none;
+		  display: inline-block;
+		  border-radius: 16px;
+		  margin: 1px 4px;
+		  cursor: pointer;
+		  width:20%;
+		  box-shadow: 0 9px grey;
+		  outline: none;
+		}
+		.button:hover {background-color: grey}
+		.text{
+			color:white;
+		    text-decoration: none;
+		    font-size: 20px;
+		}
+		.button:active {
+		  background-color: grey;
+		  box-shadow: 0 5px #666;
+		  transform: translateY(4px);
+		}
+           */
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: lightcyan;
+         
+          background-image:
+          url('Images/htl.jpg');
+          background-repeat:no-repeat;
+          background-attachment:fixed;
+          background-size:100% 110%;
+          color: black;
+        }
+       form{
+            margin-left:20%;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.8;
+            background-color: rgba(0,0,0,0.5);
+            max-width:750px;
+            color: #fff;
+        }
+        input[type = "text"]{
+            padding: 10px;
+            width: 300px;
+        }
+        i{
+            color: red;
+            font-size: 25px;
+        }
+        .formcontent{
+            max-width:650px;
+            padding: 40px;
+            padding-left: 60px;
+        }
+        label[for = "Fname"]{
+            color: rgb(42, 221, 221);
+            font-size: 15px; 
+        }
+        label[for = "Lname"]{
+            color: rgb(42, 221, 221);
+            font-size: 15px;
+            margin-left: 38%;
+        }
+        #Lname,#Ddate,#points2{
+            margin-left: 20px;
+        }
+        input{
+            border-radius: 5px;
+            outline: none;
+            border:0.5px solid lightblue;
+        }
+        input[type = "email"]{
+            padding: 10px;
+            width: 625px;
+        }
+        label[for = "Ddate"]{
+            color: rgb(42, 221, 221);
+            font-size: 15px;
+            margin-left: 37%;
+        }
+        label[for = "Adate"]{
+            color: rgb(42, 221, 221);
+            font-size: 15px;
+        }
+        input[type = "date"]{
+            padding: 10px;
+            width: 300px;
+        }
+        input[type = "tel"]{
+            padding: 10px;
+            width: 500px;
+        }
+        label[for = "points"]{
+            color: rgb(42, 221, 221);
+            font-size: 15px;
+        }
+        label[for = "points2"]{
+            color: rgb(42, 221, 221);
+            font-size: 15px;
+            margin-left: 37%;
+        }
+        input[type = "number"]{
+            padding: 10px;
+            width: 300px;
+        }
+        textarea{
+            height: 70px;
+            width: 625px;
+            border-radius: 5px;
+            border: 1px solid lightblue;
+        }
+        .button{
+            width: 200px;
+            color: white;
+            background-color: navy;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .button:hover{
+            background-color:rgb(131, 204, 228) ;
+            color: black;
+        }
+        .top-container{
+            background-color:rgb(43, 43, 100);
+            padding: 14px 16px;
+            color: #fff;
+            margin: 0;
+            position: fixed;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-container" >
+        <p id="heading">Hotel Booking<span style="color: rgb(8, 150, 255)">.com</span></p>
+    </div>
+    <br><br> <br><br><br><br> <br><br>
+	<form action = "form" method="post">
+		<div class="formcontent">
+        <label>Full Name</label><i>*</i><br>
+		<input type="text" id = "Fname" name="FirstName" autocomplete="off"  placeholder="Enter your FirstName" required>
+		<input type="text" id = "Lname"  name="LastName"  autocomplete="off" " placeholder="Enter your Last Name" required><br>
+        <label for = "Fname">First Name</label>
+        <label for = "Lname">Last Name</label><br>
+	    
+	    <br>
+	    <label for = "email">Email-id:</label><i>*</i>
+		<input type="email" id = "email"  name="email-id"  autocomplete="off"  placeholder="Enter the Email-id" required>
+        <br><br>
+        <label>Date</label><i>*</i><br>
+		<input type="date" id = "Adate"  name="Arr-date"
+		placeholder="Enter the Arrival-date" required>
+        <input type="date" id = "Ddate"  name="Dep-date"
+		placeholder="Enter the Departure-date" required><br>
+        <label for = "Adate">Arrival-date:</label>
+        <label for = "Ddate">Departure-date:</label><br> <br>
+		<label for = "Phno">Phone Number:</label><i>*</i>
+		<input type="tel" id = "Phno"  name="PhoneNumber" title = "Give your phone Number in a given format:Format:123-456-7891"  
+        placeholder="Phone Number"required><br><br> 
+
+        <input type="number" id="points" name="points" min = "0"  placeholder="Enter No. of Adults">
+  		<input type="number" id="points2" name="points" min = "0"  placeholder="Enter No. of children"><br>
+		<label for="points">No. of Adults:</label>
+        <label for="points2">No. of children:</label>
+  		
+        <br><br>
+		<label for = "Qc">Questions & Comments:</label><br>
+		<textarea></textarea>
+        <br><br>
+        <center><div><input type = "submit" class = "button" value = "Make Your Reservations">
+        <input type = "reset"  class = "button" value = "Reset"></div></center> 
+
+        </div><br>
+	
+	</form>
+</body>
+</html>
